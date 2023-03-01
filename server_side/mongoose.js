@@ -9,6 +9,7 @@ module.exports = async() => {
     await mongoose.connect(uri, {
         useNewUrlParser: true
     });
+    mongoose.set('strictQuery', false)
     console.log('Connecting !!!')
     return mongoose
 }
